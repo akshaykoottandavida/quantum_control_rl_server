@@ -10,10 +10,10 @@ sys.path.append(os.path.dirname(os.path.dirname(os.getcwd())))
 
 import tensorflow as tf
 from tf_agents import specs
-from rl_tools.agents import PPO
+from quantum_control_rl_server.agents import PPO
 from tf_agents.networks import actor_distribution_network
-from rl_tools.remote_env_tools import remote_env_tools as rmt
-from rl_tools.utils.h5log import h5log
+from quantum_control_rl_server.remote_env_tools import remote_env_tools as rmt
+from quantum_control_rl_server.utils.h5log import h5log
 import numpy as np
 
 root_dir = os.getcwd() #r'E:\rl_data\exp_training\pi_pulse'
@@ -87,7 +87,7 @@ log = h5log(root_dir, rl_params)
 ############################################################
 
 # Create drivers for data collection
-from rl_tools.agents import dynamic_episode_driver_sim_env
+from quantum_control_rl_server.agents import dynamic_episode_driver_sim_env
 
 server_socket = rmt.Server()
 (host, port) = (host_ip, 5555) 

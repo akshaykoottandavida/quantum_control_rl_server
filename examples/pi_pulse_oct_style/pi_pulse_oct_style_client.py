@@ -22,7 +22,7 @@ stream_handler = logging.StreamHandler(sys.stdout)
 logger.addHandler(stream_handler)
 logger.setLevel(logging.INFO)
 
-from rl_tools.remote_env_tools.remote_env_tools import Client
+from quantum_control_rl_server.remote_env_tools.remote_env_tools import Client
 
 from examples.pi_pulse_oct_style.pi_pulse_oct_style_sim_function import pi_pulse_oct_style_sim
 

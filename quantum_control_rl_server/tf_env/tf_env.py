@@ -187,7 +187,6 @@ class TFEnvironmentQuantumControl(tf_environment.TFEnvironment):
         # send action sequence and metadata to remote client
         message = dict(action_batch=action_batch,
                        batch_size=self.batch_size,
-                       #N_msmt=N_msmt,
                        epoch_type=epoch_type,
                        epoch=self._epoch)
 
