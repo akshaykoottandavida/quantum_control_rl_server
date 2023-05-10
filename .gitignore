@@ -119,4 +119,6 @@ logdir/
 # Output zips
 *.zip
 
+.gitconfig
+
 

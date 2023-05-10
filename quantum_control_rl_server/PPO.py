@@ -19,8 +19,6 @@ from tf_agents.agents.ppo import ppo_agent
 from tf_agents.utils import timer
 from tf_agents.metrics import tf_metrics
 
-from quantum_control_rl_server.utils.rl_train_utils import save_log
-
 def train_eval(
         root_dir,
         random_seed = 0,
@@ -326,8 +324,7 @@ def train_eval(
                 log['returns'].append(avg_return)
                 log['experience_time'].append(experience_timer.value())
                 log['train_time'].append(train_timer.value())
-                # Save updated log
-                #save_log(log, logfile, ('%d' % epoch).zfill(6))
+
 
             if save_tf_style:
                 if epoch % save_interval == 0:

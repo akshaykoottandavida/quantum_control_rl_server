@@ -10,7 +10,6 @@ setup(
     author="Volodymyr Sivak, Henry Liu, Ben Brock",
     author_email="bbrock89@gmail.com",
     url="https://github.com/bbrock89/quantum_control_rl_server",
-    packages = find_packages('quantum_control_rl_server'),
-    package_dir={'':'quantum_control_rl_server'},
+    packages = ["quantum_control_rl_server"],
     requires=[],
 )
