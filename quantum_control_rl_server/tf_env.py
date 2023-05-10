@@ -180,6 +180,7 @@ class TFEnvironmentQuantumControl(tf_environment.TFEnvironment):
         action_batch = {}
         for a in self.history.keys() - ['msmt']:
             # reshape to [batch_size, T, action_dim]
+
             action_history = np.array(self.history[a][1:])
             action_batch[a] = np.transpose(action_history,
                             axes=[1,0]+list(range(action_history.ndim)[2:]))

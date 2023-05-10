@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import os
 import sys
 # add quantum-control-rl dir to path for subsequent imports
-sys.path.append(os.path.dirname(os.path.dirname(os.getcwd())))
+#sys.path.append(os.path.dirname(os.path.dirname(os.getcwd())))
 
 import logging
 import time
@@ -22,9 +22,9 @@ stream_handler = logging.StreamHandler(sys.stdout)
 logger.addHandler(stream_handler)
 logger.setLevel(logging.INFO)
 
-from quantum_control_rl_server.remote_env_tools.remote_env_tools import Client
+from quantum_control_rl_server.remote_env_tools import Client
 
-from examples.pi_pulse_oct_style.pi_pulse_oct_style_sim_function import pi_pulse_oct_style_sim
+from pi_pulse_oct_style_sim_function import pi_pulse_oct_style_sim
 
 client_socket = Client()
 (host, port) = '127.0.0.1', 5555 # ip address of RL server, here it's hosted locally

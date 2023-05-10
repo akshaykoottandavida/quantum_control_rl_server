@@ -1,7 +1,7 @@
 from tf_agents.drivers import dynamic_episode_driver
-from version_helper import TFPolicy
-from . import tf_env_wrappers as wrappers
-from tf_env import TFEnvironmentQuantumControl
+from quantum_control_rl_server.version_helper import TFPolicy
+from quantum_control_rl_server import tf_env_wrappers as wrappers
+from quantum_control_rl_server.tf_env import TFEnvironmentQuantumControl
 
 
 class PolicyPlaceholder(TFPolicy):

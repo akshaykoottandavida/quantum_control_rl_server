@@ -10,10 +10,10 @@ sys.path.append(os.path.dirname(os.path.dirname(os.getcwd())))
 
 import tensorflow as tf
 from tf_agents import specs
-from quantum_control_rl_server.agents import PPO
+from quantum_control_rl_server import PPO
 from tf_agents.networks import actor_distribution_network
-from quantum_control_rl_server.remote_env_tools import remote_env_tools as rmt
-from quantum_control_rl_server.utils.h5log import h5log
+from quantum_control_rl_server import remote_env_tools as rmt
+from quantum_control_rl_server.h5log import h5log
 
 root_dir = os.getcwd() #r'E:\rl_data\exp_training\pi_pulse'
 host_ip = '127.0.0.1' # ip address of RL server, here it's hosted locally
@@ -78,7 +78,7 @@ log = h5log(root_dir, rl_params)
 ############################################################
 
 # Create drivers for data collection
-from quantum_control_rl_server.agents import dynamic_episode_driver_sim_env
+from quantum_control_rl_server import dynamic_episode_driver_sim_env
 
 server_socket = rmt.Server()
 (host, port) = (host_ip, 5555) 
