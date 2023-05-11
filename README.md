@@ -1,5 +1,5 @@
 # Model-Free Quantum Control with Reinforcement Learning
-Fork of [v-sivak/quantum_control_rl](https://github.com/v-sivak/quantum_control_rl); in this version the server (RL agent) and client (experiment or sim) communicate over tcpip.  This may be a bottleneck for some applications, but it's very convenient for others.
+Fork of [v-sivak/quantum-control-rl](https://github.com/v-sivak/quantum-control-rl); in this version the server (RL agent) and client (experiment or sim) communicate over tcpip.  This may be a bottleneck for some applications, but it's very convenient for others.
 
 This code was used in the following publications:
 
